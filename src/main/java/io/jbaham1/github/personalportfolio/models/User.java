@@ -25,7 +25,8 @@ public class User {
 
 //    @OneToMany (cascade = CascadeType.ALL, mappedBy = "comment_id")
 //    private List<Comment> comments;
-public User() {
+    public User(){}
+public User(User user) {
 }
 
     public User(String username, String email, String password, List<Blog> blog) {
@@ -42,6 +43,8 @@ public User() {
         this.password = password;
         this.blog = blog;
     }
+
+
 
     public long getId() {
         return id;
