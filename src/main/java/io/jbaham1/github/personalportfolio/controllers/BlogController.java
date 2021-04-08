@@ -1,18 +1,24 @@
 package io.jbaham1.github.personalportfolio.controllers;
 
+import io.jbaham1.github.personalportfolio.repositories.BlogRepository;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 
-import java.util.List;
-
-
 @Controller
 public class BlogController {
+private final BlogRepository blogDao;
 
-    @GetMapping("/posts")
-    public String seeAllPosts() {
+    public BlogController(BlogRepository blogDao) {
+        this.blogDao = blogDao;
+    }
+
+
+    @GetMapping("/blogs")
+    public String seeAllPosts(Model viewModel) {
+    viewModel.addAttribute("blogs", blogDao.findAll());
         return "blog/index";
     }
 

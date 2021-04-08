@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.codeup</groupId>
-    <artifactId>springblog</artifactId>
+    <artifactId>personal-portfolio</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>personal-portfolio</name>
     <description>Demo project for Spring Boot</description>
@@ -39,7 +39,6 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>
