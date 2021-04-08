@@ -1,6 +1,7 @@
 package io.jbaham1.github.personalportfolio.models;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "blogs")
@@ -19,6 +20,9 @@ public class Blog {
     @OneToOne
     private User owner;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "blog")
+    private List<Comment> comments;
+
     public Blog() {
     }
 
@@ -28,11 +32,12 @@ public class Blog {
         this.owner = owner;
     }
 
-    public Blog(long id, String title, String body, User owner) {
+    public Blog(long id, String title, String body, User owner, List<Comment> comments) {
         this.id = id;
         this.title = title;
         this.body = body;
         this.owner = owner;
+        this.comments = comments;
     }
 
     public long getId() {

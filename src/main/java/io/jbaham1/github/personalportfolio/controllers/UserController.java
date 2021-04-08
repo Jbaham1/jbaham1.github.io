@@ -26,7 +26,7 @@ public class UserController {
     @PostMapping("/sign-up")
     public String saveUser(@ModelAttribute User user, Model viewModel) {
         userDao.save(user);
-        return "redirect:/login";
+        return "redirect:/blogs/index";
     }
 
 }
