@@ -8,7 +8,7 @@
         <version>2.1.18.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>io.jbaham1.github</groupId>
+    <groupId>io.jeremiahbaham.github</groupId>
     <artifactId>personal-portfolio</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>personal-portfolio</name>
